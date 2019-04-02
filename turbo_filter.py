@@ -29,7 +29,7 @@ for file in files :
 
     # curl with Google API
     headers = {
-        'Authorization': 'Bearer %s'%cred ,#'Bearer ya29.GlzZBsVLIfNkBELGfDTBSPeM8rpRlT15DPb6TkbkbdA1I1qkhFJnOpegN-v0RSK57wrTWzFrfpNBFUjYEPQeSGL6PDixVHzLko9IVn781qM5zUpDE0m72XbN6h99OA',
+        'Authorization': 'Bearer %s'%cred ,#'Bearer xxxxx',
         'Content-Type': 'application/json'
     }
 
@@ -37,7 +37,7 @@ for file in files :
 
     data = '{ \'image_entities_request\': {\n                \'image\': {\n                    \'content\': \'%s\'\n                 },\n                 \'mids\': {\n                    \'entity_ids\': %s\n                 }\n             }\n          }' %(encoded_img, entities)
 
-    response = requests.post('https://aiworkshop.googleapis.com/v1experimental/projects/ai-workshop-tif/locations/us-central1/models/TIF3298984826652076257:predict', headers=headers, data=data, verify=True).json()
+    response = requests.post('https://aiworkshop.googleapis.com/xxx', headers=headers, data=data, verify=True).json()
     print(response)
     # response
 
